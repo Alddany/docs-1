@@ -1,4 +1,14 @@
----
+---// Octokit.js
+// https://github.com/octokit/core.js#readme
+const octokit = new Octokit({
+  auth: 'YOUR-TOKEN'
+})
+
+await octokit.request('GET /zen', {
+  headers: {
+    'X-GitHub-Api-Version': '2022-11-28'
+  }
+})
 title: REST API endpoints for meta data
 shortTitle: Meta
 allowTitleToDifferFromFilename: true
